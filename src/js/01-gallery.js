@@ -14,7 +14,6 @@ function createGallery(items) {
   `
     )
     .join('');
-
   galleryList.innerHTML = galleryMarkup;
 }
 createGallery(galleryItems);

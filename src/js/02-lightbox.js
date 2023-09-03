@@ -14,7 +14,6 @@ function createGallery(items) {
   `
     )
     .join('');
-
   galleryList.innerHTML = galleryMarkup;
 }
 createGallery(galleryItems);
@@ -22,18 +21,10 @@ console.log(galleryItems);
 
 //todo 2
 document.addEventListener('DOMContentLoaded', function () {
-  // Створюємо екземпляр SimpleLightbox та передаємо селектор елементів галереї
   const gallery = new SimpleLightbox('.gallery a.gallery__link', {
     captionsData: 'alt',
-    captionDelay: 250, // Затримка відображення підпису (у мілісекундах)
+    captionDelay: 250,
   });
-
-  // Опціонально, додайте обробники подій для галереї
-  gallery.on('show.simplelightbox', function () {
-    // Код, який виконується під час відображення зображення
-  });
-
-  gallery.on('closed.simplelightbox', function () {
-    // Код, який виконується після закриття галереї
-  });
+  gallery.on('show.simplelightbox', function () {});
+  gallery.on('closed.simplelightbox', function () {});
 });
